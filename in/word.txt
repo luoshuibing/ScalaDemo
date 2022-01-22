@@ -1,0 +1,6 @@
+hello hadoop
+hello hbase
+hello kafka
+hello scala
+hello hadoop
+hello hbase

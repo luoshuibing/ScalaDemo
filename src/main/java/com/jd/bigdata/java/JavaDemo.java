@@ -1,5 +1,8 @@
 package com.jd.bigdata.java;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author FM
  * @Description
@@ -8,9 +11,12 @@ package com.jd.bigdata.java;
 public class JavaDemo {
 
     public static void main(String[] args) {
-        int i=5;
-        i++;
-        System.out.println(i);
+        List<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(12);
+        list.add(11);
+        list.add(13);
+        list.add(9);
     }
 
 }
