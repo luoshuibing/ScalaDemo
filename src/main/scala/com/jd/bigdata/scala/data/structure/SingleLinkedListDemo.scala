@@ -1,5 +1,7 @@
 package com.jd.bigdata.scala.data.structure
 
+import java.util
+
 import scala.util.control.Breaks._
 
 object SingleLinkedListDemo {
@@ -16,6 +18,8 @@ object SingleLinkedListDemo {
     singleLinkedList.addOrder(node2)
     singleLinkedList.addOrder(node2)
     singleLinkedList.list()
+
+    singleLinkedList.reverse()
 
 
     //singleLinkedList.update(new HeroNode(4, "公孙胜", "入云龙"))
@@ -51,6 +55,30 @@ class SingleLinkedList {
 
   def isEmpty(): Boolean = {
     head.next == null
+  }
+
+  def reverse(): Unit = {
+    if (isEmpty()) {
+      println("链表空")
+      return
+    }
+    val stack = new util.Stack[HeroNode]()
+    var top = head.next
+    breakable {
+      while (true) {
+        stack.push(top)
+        if (top.next == null) {
+          break()
+        }
+        top = top.next
+      }
+    }
+
+    while (!stack.empty()) {
+      val node: HeroNode = stack.pop()
+      println(s"${node.no} ${node.nickname}")
+    }
+
   }
 
   def list(): Unit = {
