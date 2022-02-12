@@ -36,7 +36,9 @@ object ScalaCollectionMethod {
     //扁平化
     val strings = List("hello world", "hello hbase", "hello kafka")
     val flatMapList: List[String] = strings.flatMap(s => s.split(" "))
+    println(">>>>>>>>>>>>>>>>>>>>>>>")
     println(flatMapList)
+    println(">>>>>>>>>>>>>>>>>>>>>>>")
 
     //过滤
     println(list.filter(x => x % 2 == 0))
