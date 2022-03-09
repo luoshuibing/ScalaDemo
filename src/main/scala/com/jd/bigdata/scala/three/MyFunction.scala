@@ -83,6 +83,7 @@ object MyFunction {
     test11("zs", "ls", "ww")
     test11()
 
+    //方法传递默认值
     def test12(name: String, age: Int = 20): Unit = {
       println(s"$name-$age")
     }
